@@ -3,7 +3,16 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import WebApp from '@twa-dev/sdk'
+import { TonConnectButton } from '@tonconnect/ui-react'
 
+export const Header = () => {
+  return (
+      <header>
+          <span>My App with React UI</span>
+          <TonConnectButton />
+      </header>
+  );
+};
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +27,9 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      
+      <Header/>
+
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
